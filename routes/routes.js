@@ -26,9 +26,6 @@ routes.post('/forms', async (req,res) => {
 routes.get('/projetos', async (req, res) => {
     try{
         const [rows] = await db.query('SELECT * FROM projetos');
-
-        console.log(rows)
-
         return res.json(rows)
     }catch(error){
         console.error(error)
